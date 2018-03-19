@@ -1,0 +1,7 @@
+{
+    "rpc_node": "https://api.steemit.com",
+    "payout_account" : "payoutaccount",
+    "payout_active_key" : "5...",
+    "payout_file" : "payout.json",
+    "payout_currency" : "SBD"
+}

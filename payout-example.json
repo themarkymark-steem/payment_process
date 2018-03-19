@@ -1,0 +1,12 @@
+[
+  {
+    "Player": "username1",
+    "Amount": 0.001,
+    "Memo": "payout for super fun game"
+  },
+  {
+    "Player": "username2",
+    "Amount": 0.001,
+    "Memo": "payout for super fun game"
+  }
+]

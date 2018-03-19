@@ -1,0 +1,15 @@
+{
+  "name": "payment_process",
+  "version": "0.0.1",
+  "description": "Process payments via JSON for Steem",
+  "main": "payout.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node payout.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "steem": "^0.7.1"
+  }
+}

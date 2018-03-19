@@ -1,0 +1,11 @@
+# config
+config.json
+
+# logs
+*.logs
+
+# dependencies
+node_modules
+
+# payout file
+payout.json
