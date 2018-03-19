@@ -8,6 +8,7 @@ Install [NodeJS](https://nodejs.org/en/) (Current not LTS)
 `git clone https://github.com/themarkymark-steem/payment_process.git`
 
 # Install Dependencies
+`cd payment_process`
 `npm install`
 **Only run this the first time or when updating to new version**
 
