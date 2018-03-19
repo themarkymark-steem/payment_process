@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Process payments via JSON for Steem",
   "main": "payout.js",
+    "repository": {
+    "type": "git",
+    "url": "git://github.com/themarkymark-steem/payment_process"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node payout.js"
