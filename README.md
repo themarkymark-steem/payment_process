@@ -9,7 +9,9 @@ Install [NodeJS](https://nodejs.org/en/) (Current not LTS)
 
 # Install Dependencies
 `cd payment_process`
+
 `npm install`
+
 **Only run this the first time or when updating to new version**
 
 # Install configuration file
