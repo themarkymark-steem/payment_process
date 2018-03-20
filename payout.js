@@ -116,13 +116,22 @@ function checkFundsRequired() {
     });
 }
 
+function format(n, c, d, t) {
+    var c = isNaN(c = Math.abs(c)) ? 2 : c,
+        d = d == undefined ? "." : d,
+        t = t == undefined ? "," : t,
+        s = n < 0 ? "-" : "",
+        i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
+        j = (j = i.length) > 3 ? j % 3 : 0;
+     return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+   }
 
 function processPayouts() {
     console.log('--Payouts Started--')
     for (let i = 0; i < payees.length; i++) {
 
         if (!simulate) {
-            steem.broadcast.transfer(config.payout_active_key, config.payout_account, payees[i]['Player'], payees[i]['Amount'] + ' ' + config.payout_currency, payees[i]['Memo'], function (err, response) {
+            steem.broadcast.transfer(config.payout_active_key, config.payout_account, payees[i]['Player'], format(payees[i]['Amount'], 3) + ' ' + config.payout_currency, payees[i]['Memo'], function (err, response) {
                 if (err) {
                 payment_failures += 1;
                 console.log('Error sending payout to @' + payees[i]['Player'] + ' for: ' + payees[i]['Amount'] + ' ' + config.payout_currency + ', Error: ' + err);
